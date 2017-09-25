@@ -171,7 +171,7 @@ def linear_activation_backward(dA_prev, caches, activation):
     
     linear_cache, activation_cache = caches
     
-    if activation == "softmax": #If it's good, delete this part and put a linear_backward directly in L_model_backward
+    if activation == "softmax":
         dZ = softmax_backward(dA_prev, activation_cache)
         
     if activation == "relu":
