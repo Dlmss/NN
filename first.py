@@ -197,7 +197,7 @@ def L_model_backward(Y, AL, caches):
     L = len(caches)
     current_cache = caches[L-1]
     
-    dAL = AL - Y  #In reality it's dZL = AL - Y but it's to try
+    dAL = AL - Y
     grads["dW" + str(L)], grads["dA" + str(L)], grads["db" + str(L)] = linear_activation_backward(dAL, current_cache, "softmax")
     
     for l in reversed(range(L-1)):
